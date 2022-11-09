@@ -12,6 +12,10 @@
 @tailwind utilities;
 
 @layer base {
+	::selection {
+		@apply bg-primary-400 text-white;
+	}
+
 	::-webkit-scrollbar {
 		@apply h-2 w-2;
 	}
