@@ -13,7 +13,7 @@
 
 @layer base {
 	body {
-		@apply min-h-screen text-lg text-neutral-900;
+		@apply text-lg text-neutral-900;
 
 		font-family: "Gotham Book", sans-serif;
 	}
@@ -34,24 +34,13 @@
 }
 
 @layer components {
-	.login-input {
-		@apply relative flex flex-col text-xl;
-
-		& + & {
-			@apply mt-6;
-		}
-
-		& input {
-			@apply min-w-[24rem] border-b-2 border-gray-300 py-2 transition-colors focus:outline-none focus-visible:border-primary-400;
-		}
-
-		& .la {
-			@apply absolute right-0 top-0 mt-2 text-lg;
-		}
+	.login-bg-img {
+		background-image: url("../img/hannah-3-wide-medium.jpg");
+		background-position: 100% 50%;
 	}
 
 	.nav-item {
-		@apply flex items-center rounded-md px-6 py-3 font-bold transition-colors hover:text-primary-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2;
+		@apply flex items-center rounded-md px-6 py-3 font-bold text-zinc-500 transition-colors hover:text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2;
 
 		& + & {
 			@apply ml-4;
@@ -67,18 +56,26 @@
 	}
 
 	.btn {
-		@apply flex items-center justify-center rounded-md px-[0.5em] py-[0.25em] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2;
+		@apply flex min-w-[10rem] items-center justify-center rounded-md px-5 py-3 font-bold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2;
+
+		& .la {
+			@apply text-2xl;
+		}
+
+		&-primary {
+			@apply btn bg-primary-400 text-white hover:bg-primary-500;
+		}
 
 		&-neutral {
 			@apply btn bg-gray-200 hover:bg-gray-300;
 		}
 
-		&-icon {
-			@apply btn h-11 w-11;
+		&-ghost {
+			@apply btn bg-transparent hover:bg-black hover:bg-opacity-10;
+		}
 
-			& .la {
-				@apply text-2xl;
-			}
+		&-icon {
+			@apply btn h-11 w-11 min-w-0;
 		}
 	}
 }

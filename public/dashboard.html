@@ -1,3 +1,7 @@
+<!-- TODO -->
+<!-- big icon btns like config page in upload-frontend -->
+<!-- for most used features or custom shortcuts -->
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -12,7 +16,7 @@
 		/>
 		<link
 			rel="shortcut icon"
-			href="https://www.supporters.dk/favicon.ico"
+			href="favicon.ico"
 			type="image/x-icon"
 		/>
 		<link
@@ -23,304 +27,63 @@
 			rel="stylesheet"
 			href="css/style.css"
 		/>
+		<script
+			src="js/search.js"
+			defer
+		></script>
 		<title>Backend Hub - Dashboard</title>
 	</head>
 	<body>
-		<header class="flex py-6 px-8">
-			<div class="mx-8 h-12">
-				<img
-					src="https://www.supporters.dk/images/supporters-logo-black-4.svg"
-					alt="supporters logo"
-				/>
-			</div>
-			<nav class="flex items-center">
-				<a
-					href="#"
-					class="nav-item"
-				>
-					<div>
-						<i class="la la-clock text-2xl"></i>
+		<div class="flex min-h-screen flex-col">
+			<header class="flex flex-col px-8 pt-6 shadow-xl">
+				<div class="flex pb-6">
+					<div class="ml-8 mr-12 h-12">
+						<img
+							src="./img/supporters-logo-black-4.svg"
+							alt="supporters logo"
+						/>
 					</div>
-					<div>Dashboard</div>
-				</a>
-				<a
-					href="#"
-					class="nav-item active"
-				>
-					<div>
-						<i class="la la-file-alt text-2xl"></i>
-					</div>
-					<div>Reports</div>
-				</a>
-			</nav>
-			<div class="relative ml-auto flex rounded-md border-2 border-transparent py-1 px-2 focus-within:border-primary-400">
-				<input
-					class="h-full pr-7 text-xl focus:outline-none"
-					type="text"
-					name="searchInput"
-					id="searchInput"
-					placeholder="search"
-				/>
-				<div
-					class="absolute top-1/4 right-2 cursor-pointer items-center"
-					data-search-clear
-				>
-					<i
-						class="la la-search text-xl"
-						data-search-clear-icon
-					></i>
-				</div>
-			</div>
-		</header>
-		<div class="flex flex-row justify-between bg-gray-100 px-8 py-2 shadow-xl">
-			<div class="flex flex-row">
-				<div class="mr-4 flex items-center border-r-2 border-gray-200 pr-4 font-bold">
-					<p class="mr-2">Reports:</p>
-					<div class="rounded-md bg-white px-2 focus-within:ring-2 focus-within:ring-primary-400">
-						<select
-							class="cursor-pointer bg-transparent py-2 pr-4 focus:outline-none"
-							name="reports"
-							id="reports"
+					<nav class="flex items-center">
+						<a
+							href="dashboard.html"
+							class="nav-item active"
 						>
-							<option
-								value="devices"
-								selected
-							>
-								Devices
-							</option>
-							<option value="alerts">Alerts</option>
-							<option value="patches">Patches</option>
-							<option value="software">Software</option>
-						</select>
-					</div>
-				</div>
-				<div class="mr-4 flex items-center border-r-2 border-gray-200 pr-4 font-bold">
-					<p class="mr-2">OS:</p>
-					<div class="rounded-md bg-white px-2 focus-within:ring-2 focus-within:ring-primary-400">
-						<select
-							class="cursor-pointer py-2 pr-4 focus:outline-none"
-							name="os"
-							id="os"
+							<div>
+								<i class="la la-clock text-2xl"></i>
+							</div>
+							<div>Dashboard</div>
+						</a>
+						<a
+							href="reports.html"
+							class="nav-item"
 						>
-							<option
-								value="all"
-								selected
-							>
-								All
-							</option>
-							<option value="windows">Windows</option>
-							<option value="mac">Mac</option>
-							<option value="linux">Linux</option>
-						</select>
-					</div>
-				</div>
-				<div
-					class="hidden items-center border-r-2 border-gray-200 pr-4 font-bold"
-					data-select-container="support"
-				>
-					<p class="mr-2">Support:</p>
-					<div class="rounded-md bg-white px-2 focus-within:ring-2 focus-within:ring-primary-400">
-						<select
-							class="cursor-pointer py-2 pr-4 focus:outline-none"
-							name="support"
-							id="support"
+							<div>
+								<i class="la la-file-alt text-2xl"></i>
+							</div>
+							<div>Reports</div>
+						</a>
+					</nav>
+					<div class="relative ml-auto flex rounded-md border-2 border-gray-200 py-1 pl-4 pr-11 focus-within:border-primary-400">
+						<input
+							class="h-full text-xl focus:outline-none"
+							type="text"
+							name="searchInput"
+							id="searchInput"
+							placeholder="Search"
+						/>
+						<div
+							class="absolute top-1/4 right-3 items-center"
+							data-search-clear
 						>
-							<option
-								value="supported"
-								selected
-							>
-								Supported
-							</option>
-							<option value="unsupported">Unsupported</option>
-							<option value="all">All</option>
-						</select>
+							<i
+								class="la la-search text-xl"
+								data-search-clear-icon
+							></i>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="flex flex-row">
-				<div class="flex items-center border-l-2 border-gray-200 pl-4 font-bold">
-					<p class="mr-2">Customer:</p>
-					<div class="rounded-md bg-white px-2 focus-within:ring-2 focus-within:ring-primary-400">
-						<select
-							class="cursor-pointer py-2 pr-4 focus:outline-none"
-							name="customer"
-							id="customer"
-						>
-							<option value="">Lorem</option>
-							<option value="minima">Minima</option>
-							<option value="iure">Iure</option>
-							<option value="quis">Quis</option>
-							<option value="recusandae">Recusandae</option>
-							<option value="voluptates">Voluptates</option>
-							<option value="maiores">Maiores</option>
-							<option value="culpa">Culpa</option>
-							<option value="nobis">Nobis</option>
-							<option value="molestiae">Molestiae</option>
-							<option value="ipsam">Ipsam</option>
-							<option value="dolorum">Dolorum</option>
-							<option value="architecto">Architecto</option>
-							<option value="veritatis">Veritatis</option>
-							<option value="id">Id</option>
-							<option value="nobis">Nobis</option>
-							<option value="odit">Odit</option>
-							<option value="cumque">Cumque</option>
-							<option value="dignissimos">Dignissimos</option>
-							<option value="tempora">Tempora</option>
-							<option value="repudiandae">Repudiandae</option>
-							<option value="provident">Provident</option>
-							<option value="alias">Alias</option>
-							<option value="nemo">Nemo</option>
-							<option value="culpa">Culpa</option>
-							<option value="sint">Sint</option>
-							<option value="beatae">Beatae</option>
-							<option value="consectetur">Consectetur</option>
-							<option value="totam">Totam</option>
-							<option value="at">At</option>
-							<option value="illo">Illo</option>
-							<option value="sapiente">Sapiente</option>
-							<option value="itaque">Itaque</option>
-							<option value="atque">Atque</option>
-							<option value="quaerat">Quaerat</option>
-							<option value="explicabo">Explicabo</option>
-							<option value="nesciunt">Nesciunt</option>
-							<option value="eaque">Eaque</option>
-							<option value="accusamus">Accusamus</option>
-							<option value="labore">Labore</option>
-							<option value="ea">Ea</option>
-							<option value="rem">Rem</option>
-							<option value="inventore">Inventore</option>
-							<option value="dolore">Dolore</option>
-							<option value="nam">Nam</option>
-							<option value="dolorem">Dolorem</option>
-							<option value="eligendi">Eligendi</option>
-							<option value="beatae">Beatae</option>
-							<option value="molestias">Molestias</option>
-							<option value="obcaecati">Obcaecati</option>
-							<option value="esse">Esse</option>
-							<option value="dolor">Dolor</option>
-							<option value="adipisci">Adipisci</option>
-							<option value="debitis">Debitis</option>
-							<option value="eligendi">Eligendi</option>
-							<option value="unde">Unde</option>
-							<option value="quia">Quia</option>
-							<option value="et">Et</option>
-							<option value="quae">Quae</option>
-							<option value="suscipit">Suscipit</option>
-							<option value="eum">Eum</option>
-							<option value="atque">Atque</option>
-							<option value="sint">Sint</option>
-							<option value="similique">Similique</option>
-							<option value="ipsum">Ipsum</option>
-							<option value="distinctio">Distinctio</option>
-							<option value="natus">Natus</option>
-							<option value="voluptas">Voluptas</option>
-							<option value="aperiam">Aperiam</option>
-							<option value="omnis">Omnis</option>
-							<option value="id">Id</option>
-							<option value="quaerat">Quaerat</option>
-							<option value="ab">Ab</option>
-							<option value="saepe">Saepe</option>
-							<option value="adipisci">Adipisci</option>
-							<option value="nobis">Nobis</option>
-							<option value="excepturi">Excepturi</option>
-							<option value="iste">Iste</option>
-							<option value="nam">Nam</option>
-							<option value="eligendi">Eligendi</option>
-							<option value="laborum">Laborum</option>
-							<option value="tempore">Tempore</option>
-							<option value="excepturi">Excepturi</option>
-							<option value="neque">Neque</option>
-							<option value="nobis">Nobis</option>
-							<option value="vero">Vero</option>
-							<option value="ea">Ea</option>
-							<option value="obcaecati">Obcaecati</option>
-							<option value="eos">Eos</option>
-							<option value="itaque">Itaque</option>
-							<option value="sed">Sed</option>
-							<option value="aliquid">Aliquid</option>
-							<option value="ea">Ea</option>
-							<option value="dolor">Dolor</option>
-							<option value="architecto">Architecto</option>
-							<option value="officia">Officia</option>
-							<option value="eius">Eius</option>
-							<option value="officia">Officia</option>
-							<option value="commodi">Commodi</option>
-							<option value="odio">Odio</option>
-						</select>
-					</div>
-				</div>
-				<div class="ml-4 flex gap-2 border-l-2 border-gray-200 pl-4">
-					<button class="btn-icon btn-neutral">
-						<i class="la la-ticket"></i>
-					</button>
-					<button class="btn-icon btn-neutral">
-						<i class="la la-filter"></i>
-					</button>
-					<button class="btn-icon btn-neutral">
-						<i class="la la-file-excel"></i>
-					</button>
-					<button class="btn-icon btn-neutral">
-						<i class="la la-id-card"></i>
-					</button>
-					<button class="btn-icon btn-neutral">
-						<i class="la la-sync"></i>
-					</button>
-				</div>
-			</div>
+			</header>
+			<main class="container mx-auto flex h-full flex-1 items-center justify-center"></main>
 		</div>
-		<script>
-			const reportsSelectEl = document.querySelector("#reports");
-			const supportSelectContainerEl = document.querySelector("[data-select-container='support']");
-
-			reportsSelectEl.addEventListener("change", () => {
-				if (reportsSelectEl.value === "software") {
-					supportSelectContainerEl.classList.remove("hidden");
-					supportSelectContainerEl.classList.add("flex");
-				} else {
-					if (!supportSelectContainerEl.classList.contains("hidden")) {
-						supportSelectContainerEl.classList.add("hidden");
-						supportSelectContainerEl.classList.remove("flex");
-					}
-				}
-			});
-
-			const searchInputEl = document.querySelector("#searchInput");
-			const searchInputClearIconEl = document.querySelector("[data-search-clear-icon]");
-
-			searchInputEl.addEventListener("focus", () => {
-				if (searchInputEl.value !== "") {
-					searchInputClearIconEl.classList.add("la-times");
-					searchInputClearIconEl.classList.remove("la-search");
-				}
-			});
-
-			searchInputEl.addEventListener("blur", () => {
-				if (searchInputEl.value === "") {
-					searchInputClearIconEl.classList.add("la-search");
-					searchInputClearIconEl.classList.remove("la-times");
-				}
-			});
-
-			searchInputEl.addEventListener("keyup", () => {
-				if (searchInputEl.value !== "") {
-					searchInputClearIconEl.classList.add("la-times");
-					searchInputClearIconEl.classList.remove("la-search");
-				} else {
-					if (!searchInputClearIconEl.classList.contains("la-search")) {
-						searchInputClearIconEl.classList.add("la-search");
-						searchInputClearIconEl.classList.remove("la-times");
-					}
-				}
-			});
-
-			searchInputClearIconEl.addEventListener("click", () => {
-				searchInputEl.value = "";
-				if (!searchInputClearIconEl.classList.contains("la-search")) {
-					searchInputClearIconEl.classList.add("la-search");
-					searchInputClearIconEl.classList.remove("la-times");
-				}
-				searchInputEl.focus();
-			});
-		</script>
 	</body>
 </html>

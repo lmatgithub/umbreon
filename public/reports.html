@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link
+			rel="shortcut icon"
+			href="favicon.ico"
+			type="image/x-icon"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="css/style.css"
+		/>
+		<script
+			src="js/search.js"
+			defer
+		></script>
+		<title>Backend Hub - Reports</title>
+	</head>
+	<body>
+		<div class="flex min-h-screen flex-col">
+			<header class="flex flex-col shadow-xl">
+				<div class="flex px-8 py-6">
+					<div class="ml-8 mr-12 h-12">
+						<img
+							src="./img/supporters-logo-black-4.svg"
+							alt="supporters logo"
+						/>
+					</div>
+					<nav class="flex items-center">
+						<a
+							href="dashboard.html"
+							class="nav-item"
+						>
+							<div>
+								<i class="la la-clock text-2xl"></i>
+							</div>
+							<div>Dashboard</div>
+						</a>
+						<a
+							href="reports.html"
+							class="nav-item active"
+						>
+							<div>
+								<i class="la la-file-alt text-2xl"></i>
+							</div>
+							<div>Reports</div>
+						</a>
+					</nav>
+					<div class="relative ml-auto flex rounded-md border-2 border-gray-200 py-1 pl-4 pr-11 focus-within:border-primary-400">
+						<input
+							class="h-full text-xl focus:outline-none"
+							type="text"
+							name="searchInput"
+							id="searchInput"
+							placeholder="Search"
+						/>
+						<div
+							class="absolute top-1/4 right-3 items-center"
+							data-search-clear
+						>
+							<i
+								class="la la-search text-xl"
+								data-search-clear-icon
+							></i>
+						</div>
+					</div>
+				</div>
+				<div class="flex flex-row justify-between bg-gray-100 px-8 py-3">
+					<div class="flex flex-row">
+						<div class="mr-4 flex items-center">
+							<p class="mr-2 font-bold">Reports:</p>
+							<div class="rounded-md bg-white px-2 focus-within:ring-2 focus-within:ring-primary-400">
+								<select
+									class="cursor-pointer bg-transparent py-2 pr-4 focus:outline-none"
+									name="reports"
+									id="reports"
+								>
+									<option
+										value="devices"
+										selected
+									>
+										Devices
+									</option>
+									<option value="alerts">Alerts</option>
+									<option value="patches">Patches</option>
+									<option value="software">Software</option>
+								</select>
+							</div>
+						</div>
+						<div class="mr-4 flex items-center">
+							<p class="mr-2 font-bold">OS:</p>
+							<div class="rounded-md bg-white px-2 focus-within:ring-2 focus-within:ring-primary-400">
+								<select
+									class="cursor-pointer py-2 pr-4 focus:outline-none"
+									name="os"
+									id="os"
+								>
+									<option
+										value="all"
+										selected
+									>
+										All
+									</option>
+									<option value="windows">Windows</option>
+									<option value="mac">Mac</option>
+									<option value="linux">Linux</option>
+								</select>
+							</div>
+						</div>
+						<div
+							class="hidden items-center"
+							data-select-container="support"
+						>
+							<p class="mr-2 font-bold">Support:</p>
+							<div class="rounded-md bg-white px-2 focus-within:ring-2 focus-within:ring-primary-400">
+								<select
+									class="cursor-pointer py-2 pr-4 focus:outline-none"
+									name="support"
+									id="support"
+								>
+									<option
+										value="supported"
+										selected
+									>
+										Supported
+									</option>
+									<option value="unsupported">Unsupported</option>
+									<option value="all">All</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="flex flex-row">
+						<div class="flex items-center">
+							<p class="mr-2 font-bold">Customer:</p>
+							<div class="rounded-md bg-white px-2 focus-within:ring-2 focus-within:ring-primary-400">
+								<select
+									class="cursor-pointer py-2 pr-4 focus:outline-none"
+									name="customer"
+									id="customer"
+								>
+									<option value="">Lorem</option>
+									<option value="minima">Minima</option>
+									<option value="iure">Iure</option>
+									<option value="quis">Quis</option>
+									<option value="recusandae">Recusandae</option>
+									<option value="voluptates">Voluptates</option>
+									<option value="maiores">Maiores</option>
+									<option value="culpa">Culpa</option>
+									<option value="nobis">Nobis</option>
+									<option value="molestiae">Molestiae</option>
+									<option value="ipsam">Ipsam</option>
+									<option value="dolorum">Dolorum</option>
+									<option value="architecto">Architecto</option>
+									<option value="veritatis">Veritatis</option>
+									<option value="id">Id</option>
+									<option value="nobis">Nobis</option>
+									<option value="odit">Odit</option>
+									<option value="cumque">Cumque</option>
+									<option value="dignissimos">Dignissimos</option>
+									<option value="tempora">Tempora</option>
+									<option value="repudiandae">Repudiandae</option>
+									<option value="provident">Provident</option>
+									<option value="alias">Alias</option>
+									<option value="nemo">Nemo</option>
+									<option value="culpa">Culpa</option>
+									<option value="sint">Sint</option>
+									<option value="beatae">Beatae</option>
+									<option value="consectetur">Consectetur</option>
+									<option value="totam">Totam</option>
+									<option value="at">At</option>
+									<option value="illo">Illo</option>
+									<option value="sapiente">Sapiente</option>
+									<option value="itaque">Itaque</option>
+									<option value="atque">Atque</option>
+									<option value="quaerat">Quaerat</option>
+									<option value="explicabo">Explicabo</option>
+									<option value="nesciunt">Nesciunt</option>
+									<option value="eaque">Eaque</option>
+									<option value="accusamus">Accusamus</option>
+									<option value="labore">Labore</option>
+									<option value="ea">Ea</option>
+									<option value="rem">Rem</option>
+									<option value="inventore">Inventore</option>
+									<option value="dolore">Dolore</option>
+									<option value="nam">Nam</option>
+									<option value="dolorem">Dolorem</option>
+									<option value="eligendi">Eligendi</option>
+									<option value="beatae">Beatae</option>
+									<option value="molestias">Molestias</option>
+									<option value="obcaecati">Obcaecati</option>
+									<option value="esse">Esse</option>
+									<option value="dolor">Dolor</option>
+									<option value="adipisci">Adipisci</option>
+									<option value="debitis">Debitis</option>
+									<option value="eligendi">Eligendi</option>
+									<option value="unde">Unde</option>
+									<option value="quia">Quia</option>
+									<option value="et">Et</option>
+									<option value="quae">Quae</option>
+									<option value="suscipit">Suscipit</option>
+									<option value="eum">Eum</option>
+									<option value="atque">Atque</option>
+									<option value="sint">Sint</option>
+									<option value="similique">Similique</option>
+									<option value="ipsum">Ipsum</option>
+									<option value="distinctio">Distinctio</option>
+									<option value="natus">Natus</option>
+									<option value="voluptas">Voluptas</option>
+									<option value="aperiam">Aperiam</option>
+									<option value="omnis">Omnis</option>
+									<option value="id">Id</option>
+									<option value="quaerat">Quaerat</option>
+									<option value="ab">Ab</option>
+									<option value="saepe">Saepe</option>
+									<option value="adipisci">Adipisci</option>
+									<option value="nobis">Nobis</option>
+									<option value="excepturi">Excepturi</option>
+									<option value="iste">Iste</option>
+									<option value="nam">Nam</option>
+									<option value="eligendi">Eligendi</option>
+									<option value="laborum">Laborum</option>
+									<option value="tempore">Tempore</option>
+									<option value="excepturi">Excepturi</option>
+									<option value="neque">Neque</option>
+									<option value="nobis">Nobis</option>
+									<option value="vero">Vero</option>
+									<option value="ea">Ea</option>
+									<option value="obcaecati">Obcaecati</option>
+									<option value="eos">Eos</option>
+									<option value="itaque">Itaque</option>
+									<option value="sed">Sed</option>
+									<option value="aliquid">Aliquid</option>
+									<option value="ea">Ea</option>
+									<option value="dolor">Dolor</option>
+									<option value="architecto">Architecto</option>
+									<option value="officia">Officia</option>
+									<option value="eius">Eius</option>
+									<option value="officia">Officia</option>
+									<option value="commodi">Commodi</option>
+									<option value="odio">Odio</option>
+								</select>
+							</div>
+						</div>
+						<div class="ml-4 flex gap-2">
+							<button class="btn-icon btn-ghost">
+								<i class="la la-ticket"></i>
+							</button>
+							<button class="btn-icon btn-ghost">
+								<i class="la la-filter"></i>
+							</button>
+							<button class="btn-icon btn-ghost">
+								<i class="la la-file-excel"></i>
+							</button>
+							<button class="btn-icon btn-ghost">
+								<i class="la la-id-card"></i>
+							</button>
+							<button class="btn-icon btn-ghost">
+								<i class="la la-sync"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="container mx-auto mt-10 h-full flex-1">
+				<table class="w-full bg-gray-100">
+					<thead>
+						<tr>
+							<th>Lorem</th>
+							<th>Officia</th>
+							<th>Quaerat</th>
+							<th>Qui</th>
+							<th>Perspiciatis</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Lorem</td>
+							<td>Id</td>
+							<td>Vel</td>
+							<td>Tenetur</td>
+							<td>Ad</td>
+						</tr>
+						<tr>
+							<td>Lorem</td>
+							<td>Debitis</td>
+							<td>Cum</td>
+							<td>Minima</td>
+							<td>Modi</td>
+						</tr>
+						<tr>
+							<td>Lorem</td>
+							<td>Possimus</td>
+							<td>Numquam</td>
+							<td>Ipsum</td>
+							<td>Possimus</td>
+						</tr>
+						<tr>
+							<td>Lorem</td>
+							<td>Illum</td>
+							<td>Nisi</td>
+							<td>Sint</td>
+							<td>Veritatis</td>
+						</tr>
+						<tr>
+							<td>Lorem</td>
+							<td>Officiis</td>
+							<td>Laborum</td>
+							<td>Deleniti</td>
+							<td>Deserunt</td>
+						</tr>
+					</tbody>
+				</table>
+			</main>
+		</div>
+		<script>
+			const reportsSelectEl = document.querySelector("#reports");
+			const supportSelectContainerEl = document.querySelector("[data-select-container='support']");
+
+			reportsSelectEl.addEventListener("change", () => {
+				if (reportsSelectEl.value === "software") {
+					supportSelectContainerEl.classList.remove("hidden");
+					supportSelectContainerEl.classList.add("flex");
+				} else {
+					if (!supportSelectContainerEl.classList.contains("hidden")) {
+						supportSelectContainerEl.classList.add("hidden");
+						supportSelectContainerEl.classList.remove("flex");
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

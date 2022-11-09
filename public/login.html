@@ -12,7 +12,7 @@
 		/>
 		<link
 			rel="shortcut icon"
-			href="https://www.supporters.dk/favicon.ico"
+			href="favicon.ico"
 			type="image/x-icon"
 		/>
 		<link
@@ -23,64 +23,74 @@
 			rel="stylesheet"
 			href="css/style.css"
 		/>
+		<script
+			src="js/login.js"
+			defer
+		></script>
 		<title>Backend Hub - Login</title>
 	</head>
 	<body>
-		<main class="container mx-auto flex min-h-screen flex-col items-center justify-center">
-			<div class="flex max-w-2xl flex-col items-center">
-				<div class="mb-8 h-14">
-					<img
-						src="https://www.supporters.dk/images/supporters-logo-black-4.svg"
-						alt="supporters logo"
-					/>
+		<div class="flex flex-row">
+			<main class="relative z-[2] flex min-h-screen w-full flex-col items-center justify-center rounded-r-2xl bg-white shadow-2xl">
+				<div class="mx-auto flex max-w-2xl flex-col items-center">
+					<div class="mb-4 w-full">
+						<img
+							class="h-14 w-auto"
+							src="./img/supporters-logo-black-4.svg"
+							alt="supporters logo"
+						/>
+					</div>
+					<h1 class="mb-12 w-full text-start text-4xl font-bold">Backend Hub</h1>
+					<form
+						class="flex flex-col"
+						data-login-form
+					>
+						<div class="group flex flex-col">
+							<label
+								class="text-base text-gray-400"
+								for="emailInput"
+								>E-mail</label
+							>
+							<div class="relative -mt-1 flex flex-col text-lg font-bold">
+								<input
+									class="min-w-[24rem] border-b-2 border-gray-300 bg-transparent py-2 transition-colors focus:outline-none group-focus-within:border-primary-400"
+									type="email"
+									name="email"
+									id="emailInput"
+									placeholder="Begynd at skrive..."
+								/>
+								<i class="la la-envelope absolute right-0 top-0 mt-2 text-2xl text-gray-500 group-focus-within:text-primary-400"></i>
+							</div>
+						</div>
+						<div class="group mt-6 flex flex-col">
+							<label
+								class="text-base text-gray-400"
+								for="appKeyInput"
+								>App key</label
+							>
+							<div class="relative -mt-1 flex flex-col text-lg font-bold">
+								<input
+									class="min-w-[24rem] border-b-2 border-gray-300 bg-transparent py-2 transition-colors focus:outline-none group-focus-within:border-primary-400"
+									type="password"
+									name="appKey"
+									id="appKeyInput"
+									placeholder="Begynd at skrive..."
+								/>
+								<i class="la la-lock absolute right-0 top-0 mt-2 text-2xl text-gray-500 group-focus-within:text-primary-400"></i>
+							</div>
+						</div>
+						<div class="mt-12 flex justify-end">
+							<button
+								submit
+								class="btn-primary"
+							>
+								Sign in
+							</button>
+						</div>
+					</form>
 				</div>
-				<h1 class="mb-8 text-4xl">Backend <span class="text-primary-400">Hub</span></h1>
-				<form
-					class="flex flex-col"
-					data-login-form
-				>
-					<div class="login-input">
-						<input
-							type="email"
-							name="email"
-							id="emailInput"
-							placeholder="E-mail"
-						/>
-						<i class="la la-envelope"></i>
-					</div>
-					<div class="login-input">
-						<input
-							type="password"
-							name="appKey"
-							id="appKeyInput"
-							placeholder="App key"
-						/>
-						<i class="la la-lock"></i>
-					</div>
-					<div class="mt-12 text-center">
-						<button
-							submit
-							class="min-w-[10rem] rounded-md bg-primary-400 px-4 py-3 text-xl font-bold text-white hover:bg-primary-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-						>
-							Sign in
-						</button>
-					</div>
-				</form>
-			</div>
-		</main>
-		<script>
-			const loginFormEl = document.querySelector("[data-login-form]");
-
-			if (loginFormEl) {
-				loginFormEl.addEventListener("submit", (ev) => {
-					ev.preventDefault();
-					handleLogin();
-				});
-			}
-
-			const handleLogin = () => {
-				window.location = "dashboard.html";
-			};
-		</script>
+			</main>
+			<div class="login-bg-img -ml-4 flex-shrink-0 flex-grow-0 basis-[45%] -scale-x-100 bg-cover bg-no-repeat"></div>
+		</div>
 	</body>
 </html>
