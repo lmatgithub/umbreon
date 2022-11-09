@@ -1,6 +1,5 @@
 <!-- TODO -->
-<!-- big icon btns like config page in upload-frontend -->
-<!-- for most used features or custom shortcuts -->
+<!-- [ ] big icon btns, like config page in upload-frontend, with a title for reports -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +34,7 @@
 	</head>
 	<body>
 		<div class="flex min-h-screen flex-col">
-			<header class="flex flex-col px-8 pt-6 shadow-xl">
+			<header class="mb-12 flex flex-col px-8 pt-6 shadow-xl">
 				<div class="flex pb-6">
 					<div class="ml-8 mr-12 h-12">
 						<img
@@ -51,7 +50,7 @@
 							<div>
 								<i class="la la-clock text-2xl"></i>
 							</div>
-							<div>Dashboard</div>
+							<p>Dashboard</p>
 						</a>
 						<a
 							href="reports.html"
@@ -60,7 +59,7 @@
 							<div>
 								<i class="la la-file-alt text-2xl"></i>
 							</div>
-							<div>Reports</div>
+							<p>Reports</p>
 						</a>
 					</nav>
 					<div class="relative ml-auto flex rounded-md border-2 border-gray-200 py-1 pl-4 pr-11 focus-within:border-primary-400">
@@ -83,7 +82,166 @@
 					</div>
 				</div>
 			</header>
-			<main class="container mx-auto flex h-full flex-1 items-center justify-center"></main>
+			<main class="container mx-auto flex h-full flex-1 flex-col">
+				<div class="flex w-full flex-col">
+					<h2 class="mb-6 text-3xl">Reports</h2>
+					<div class="grid auto-cols-[10rem] grid-flow-col gap-6">
+						<a
+							class="group flex aspect-square flex-col justify-center rounded-md border-2 border-dashed border-gray-300 px-8 transition-colors hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2"
+							href="reports.html"
+						>
+							<div class="transition-transform group-hover:scale-105 group-hover:text-primary-400">
+								<div class="mb-2 flex h-16 items-center justify-center">
+									<i class="la la-laptop text-5xl"></i>
+								</div>
+								<p class="text-center text-lg">Devices</p>
+							</div>
+						</a>
+						<a
+							class="group flex aspect-square flex-col justify-center rounded-md border-2 border-dashed border-gray-300 px-8 transition-colors hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2"
+							href="reports.html"
+						>
+							<div class="transition-transform group-hover:scale-105 group-hover:text-primary-400">
+								<div class="mb-2 flex h-16 items-center justify-center">
+									<i class="la la-warning text-5xl"></i>
+								</div>
+								<p class="text-center text-lg">Alerts</p>
+							</div>
+						</a>
+						<a
+							class="group flex aspect-square flex-col justify-center rounded-md border-2 border-dashed border-gray-300 px-8 transition-colors hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2"
+							href="reports.html"
+						>
+							<div class="transition-transform group-hover:scale-105 group-hover:text-primary-400">
+								<div class="mb-2 flex h-16 items-center justify-center">
+									<i class="la la-download text-5xl"></i>
+								</div>
+								<p class="text-center text-lg">Patches</p>
+							</div>
+						</a>
+						<a
+							class="group flex aspect-square flex-col justify-center rounded-md border-2 border-dashed border-gray-300 px-8 transition-colors hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2"
+							href="reports.html"
+						>
+							<div class="transition-transform group-hover:scale-105 group-hover:text-primary-400">
+								<div class="mb-2 flex h-16 items-center justify-center">
+									<i class="la la-shapes text-5xl"></i>
+								</div>
+								<p class="text-center text-lg">Software</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="mt-12 flex w-full flex-col">
+					<h2 class="mb-6 text-3xl">title 2</h2>
+					<div class="grid auto-cols-[10rem] grid-flow-col gap-6">
+						<a
+							class="group flex aspect-square flex-col justify-center rounded-md border-2 border-dashed border-gray-300 px-8 transition-colors hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2"
+							href="reports.html"
+						>
+							<div class="transition-transform group-hover:scale-105 group-hover:text-primary-400">
+								<div class="mb-2 flex h-16 items-center justify-center">
+									<i class="la la-laptop text-5xl"></i>
+								</div>
+								<p class="text-center text-lg">item 1</p>
+							</div>
+						</a>
+						<a
+							class="group flex aspect-square flex-col justify-center rounded-md border-2 border-dashed border-gray-300 px-8 transition-colors hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2"
+							href="reports.html"
+						>
+							<div class="transition-transform group-hover:scale-105 group-hover:text-primary-400">
+								<div class="mb-2 flex h-16 items-center justify-center">
+									<i class="la la-warning text-5xl"></i>
+								</div>
+								<p class="text-center text-lg">item 2</p>
+							</div>
+						</a>
+						<a
+							class="group flex aspect-square flex-col justify-center rounded-md border-2 border-dashed border-gray-300 px-8 transition-colors hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2"
+							href="reports.html"
+						>
+							<div class="transition-transform group-hover:scale-105 group-hover:text-primary-400">
+								<div class="mb-2 flex h-16 items-center justify-center">
+									<i class="la la-download text-5xl"></i>
+								</div>
+								<p class="text-center text-lg">item 3</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="mt-12 flex w-full flex-col">
+					<h2 class="mb-6 text-3xl">title 2</h2>
+					<div class="grid auto-cols-[10rem] grid-flow-col gap-6">
+						<a
+							class="group flex aspect-square flex-col justify-center rounded-md border-2 border-dashed border-gray-300 px-8 transition-colors hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2"
+							href="reports.html"
+						>
+							<div class="transition-transform group-hover:scale-105 group-hover:text-primary-400">
+								<div class="mb-2 flex h-16 items-center justify-center">
+									<i class="la la-laptop text-5xl"></i>
+								</div>
+								<p class="text-center text-lg">item 1</p>
+							</div>
+						</a>
+						<a
+							class="group flex aspect-square flex-col justify-center rounded-md border-2 border-dashed border-gray-300 px-8 transition-colors hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2"
+							href="reports.html"
+						>
+							<div class="transition-transform group-hover:scale-105 group-hover:text-primary-400">
+								<div class="mb-2 flex h-16 items-center justify-center">
+									<i class="la la-warning text-5xl"></i>
+								</div>
+								<p class="text-center text-lg">item 2</p>
+							</div>
+						</a>
+						<a
+							class="group flex aspect-square flex-col justify-center rounded-md border-2 border-dashed border-gray-300 px-8 transition-colors hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2"
+							href="reports.html"
+						>
+							<div class="transition-transform group-hover:scale-105 group-hover:text-primary-400">
+								<div class="mb-2 flex h-16 items-center justify-center">
+									<i class="la la-download text-5xl"></i>
+								</div>
+								<p class="text-center text-lg">item 3</p>
+							</div>
+						</a>
+						<a
+							class="group flex aspect-square flex-col justify-center rounded-md border-2 border-dashed border-gray-300 px-8 transition-colors hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2"
+							href="reports.html"
+						>
+							<div class="transition-transform group-hover:scale-105 group-hover:text-primary-400">
+								<div class="mb-2 flex h-16 items-center justify-center">
+									<i class="la la-download text-5xl"></i>
+								</div>
+								<p class="text-center text-lg">item 4</p>
+							</div>
+						</a>
+						<a
+							class="group flex aspect-square flex-col justify-center rounded-md border-2 border-dashed border-gray-300 px-8 transition-colors hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2"
+							href="reports.html"
+						>
+							<div class="transition-transform group-hover:scale-105 group-hover:text-primary-400">
+								<div class="mb-2 flex h-16 items-center justify-center">
+									<i class="la la-download text-5xl"></i>
+								</div>
+								<p class="text-center text-lg">item 5</p>
+							</div>
+						</a>
+						<a
+							class="group flex aspect-square flex-col justify-center rounded-md border-2 border-dashed border-gray-300 px-8 transition-colors hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2"
+							href="reports.html"
+						>
+							<div class="transition-transform group-hover:scale-105 group-hover:text-primary-400">
+								<div class="mb-2 flex h-16 items-center justify-center">
+									<i class="la la-download text-5xl"></i>
+								</div>
+								<p class="text-center text-lg">item 6</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</main>
 		</div>
 	</body>
 </html>
