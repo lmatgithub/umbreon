@@ -6,7 +6,8 @@
 	"scripts": {
 		"dev": "concurrently \"yarn dev:tw\" \"yarn dev:server\" -n \"tw|server\" --name-separator \"|\" -p \"{name}:\"",
 		"dev:tw": "tailwindcss -i ./src/css/main.css -o ./public/css/style.css --watch --postcss",
-		"dev:server": "live-server --no-browser public --wait=350"
+		"dev:server": "live-server --no-browser public --wait=350",
+		"build": "tailwindcss -i ./src/css/main.css -o ./public/css/style.css --minify"
 	},
 	"devDependencies": {
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
