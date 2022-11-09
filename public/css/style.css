@@ -428,6 +428,22 @@ video {
   display: none;
 }
 
+::-webkit-scrollbar{
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: hsl(14 86% 49% / var(--tw-bg-opacity));
+}
+
+::-webkit-scrollbar-thumb:hover{
+  --tw-bg-opacity: 1;
+  background-color: hsl(7 68% 47% / var(--tw-bg-opacity));
+}
+
 body{
   font-size: 1.125rem;
   line-height: 1.75rem;
